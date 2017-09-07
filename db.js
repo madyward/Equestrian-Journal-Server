@@ -1,6 +1,6 @@
 var Sequelize = require("sequelize"); //Creates Sequelize application.
-var sequelize = new Sequelize("workoutlog", "postgres", "Bizarre1Postgres5511", { //Sequelize constructor takes all three params
-	host: "localhost",		//Defines host as local host
+var sequelize = new Sequelize(process.env.DATABASE_URL || "postgres://postgres:Bizarre1Postgres5511@localhost:5432/workoutlog",
+ { 							//Sequelize constructor takes all three params
 	dialect: "postgres"		//Defines dialect as Postgres
 });
 

@@ -3,6 +3,7 @@ require("dotenv").config();
 //In short, the two below lines create an express application:
 var express = require("express");  //require("express") requires the web package application, express.
 var app = express();	//app object (from express package) is defined by express() as a function.
+var http = require("http").Server(app);
 var bodyParser = require("body-parser");
 var sequelize = require("./db");
 var User = sequelize.import("./models/user");
@@ -26,7 +27,7 @@ app.use("/api/test", function(req, res){	//app.use assigns "api/test" path, func
 
 
 
-app.listen(3000, function(){	//app object can now start a UNIX socket (two-way communication), setting up on
+http.listen(process.env.PORT || 3000, function(){	//app object can now start a UNIX socket (two-way communication), setting up on
 	console.log("app is listening on port 3000");	//port 3000, which in this line, will print to the console.
 });
 

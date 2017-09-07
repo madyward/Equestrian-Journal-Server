@@ -1,5 +1,5 @@
 {
-  "name": "workoutlogserver",
+  "name": "WorkoutLogServer",
   "version": "1.0.0",
   "description": "Server for workout log app",
   "main": "app.js",

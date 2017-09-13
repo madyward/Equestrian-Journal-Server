@@ -8,10 +8,12 @@ var jwt = require("jsonwebtoken");
 router.post("/", function(req, res){
 	var username = req.body.user.username;
 	var pass = req.body.user.password;
+	var dob = req.body.user.dob;
 
 	User.create({
 		username: username,
-		passwordhash: bcrypt.hashSync(pass, 10)
+		passwordhash: bcrypt.hashSync(pass, 10),
+		dob: dob
 	}).then(
 		
 		function createSuccess(user){

@@ -8,7 +8,7 @@ var jwt = require("jsonwebtoken");
 router.post("/", function(req, res){
 	var username = req.body.user.username;
 	var pass = req.body.user.password;
-	var dob = req.body.user.dob;
+//	var dob = req.body.user.dob;
 
 	User.create({
 		username: username,

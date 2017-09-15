@@ -18,7 +18,7 @@ router.post("/", function(req, res){
 		desc: description,
 		result: result,
 		owner: user.id,
-		def: definition
+		definition: definition
 	})
 	.then(
 		function createSuccess(log){

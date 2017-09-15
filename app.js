@@ -11,7 +11,7 @@ var User = sequelize.import("./models/user");
 
 //User.sync(); //sync({ force: true }) to drop, then create again each time app starts!
 //User.sync({force: true});
-sequelize.sync();
+sequelize.sync({force: true});
 app.use(bodyParser.json());
 app.use(require("./middleware/headers"));	//app.use is used to setup the specified middleware. The require 
 									//callback function grabs "./middleware/headers" (js file path). ^^^^^
